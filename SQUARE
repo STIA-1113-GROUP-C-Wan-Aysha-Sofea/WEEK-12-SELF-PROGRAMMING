@@ -1,0 +1,23 @@
+package selfProgramming;
+
+public class Square {
+
+	public static void printSquare(int f) {
+		// TODO Auto-generated method stub
+		System.out.println(f * f);
+		
+	}
+
+	public static void main (String[] arguments) {
+		int value = 2;
+		printSquare(value);
+		printSquare(3);
+		printSquare(value * 2);
+	}
+}
+
+Output :
+
+4
+9
+16
