@@ -1,0 +1,51 @@
+package selfProgramming;
+
+public class SearchAndRemove {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] item = {10,20,30,40,50,60,70,80,90,100};
+		boolean delete = deleteValue(item,100);
+		
+		if(delete)
+			printArray(item, item.length - 1);
+		else
+			printArray(item, item.length);
+		
+	}
+
+	static void printArray(int[] number, int size) {
+		for(int index = 0; index < size; index++)
+		System.out.println(number[index] + "");
+	}
+	
+	static boolean deleteValue(int[] num, int searchValue) {
+		int k, l;
+		boolean delete = false;
+		
+		for(k = 0; k < num.length; k++)
+			if( num[k] == searchValue) {
+				for(l = k; l < num.length - 1; l++)
+					num[l] = num[l-k];
+				delete = true;
+				break;	
+				}
+				if(delete == false)
+					System.out.println("the search value is not in the list.");
+				return delete;
+				
+	}
+}
+
+Output :
+
+10
+20
+30
+40
+50
+65
+70
+80
+90
+100
